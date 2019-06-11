@@ -1,0 +1,66 @@
+/*  Rexx PROGRAM NAME : BLCKJCK
+	DESCRIPTION		  : BLACK JACK CARD GAME
+
+	AUTHOR			  : JON HIGGINS
+	DATE			  : 6/10/2019
+*/
+CLRSCRN
+your_card1 = random(1,11)
+your_card2 = random(1,11)
+dealer_card1 = random(1,11)
+dealer_card2 = random(1,11)
+your_hand = your_card1 + your_card2
+dealer_hand = dealer_card1 + dealer_card2
+say " DEALER DEALS YOUR 1st CARD..."
+SAY " yOUR FIRST CARDS VALUE IS: " your_card1
+say " Dealer Deals his 1st card..."
+say " The Dealers 1st card value is: " dealer_card1
+say " Dealer deals your second card..."
+SAY " yOUR 2nd CARDS VALUE IS: " your_card2
+say " The dealers 2nd card is dealt. "
+say "your hands value is: " your_hand
+If your_hand > 21 then do
+	say 'BUST!!!!'
+	say 'you lose!'
+	exit
+end
+say 'Do you want to stay?'
+pull the_move
+do forever
+If the_move = 'Y' THEN LEAVE
+	your_card1 = Random(1,11)
+	yourhand = your_hand + your_card1
+	If your_hand > 21 then DO
+		SAY 'Your hand is now: ' your_hand
+		say 'BUST! You went over! '
+		EXIT
+	end
+	if dealers_hand = 21 AND your_hand = 21 then do
+		say 'TIE!'
+		say 'Dealers hand was: ' dealers_hand
+	end
+IF dealers_hand > your_hand then do
+	say 'Dealer had ' dealers_hand
+	say 'You had ' your_hand
+	say 'YOU LOSE!'
+	EXIT
+END
+IF dealers_hand < your_hand then do
+	say 'Dealer had ' dealers_hand
+	say 'You had ' your_hand
+	say 'YOU WIN!'
+	EXIT
+END
+IF dealers_hand < your_hand and your_hand < 21 then do
+	say 'Dealer had ' dealers_hand
+	say 'You had ' your_hand
+	say 'YOU WIN!'
+	EXIT
+END
+IF dealers_hand = your_hand then do
+	say 'TIE!'
+	EXIT
+END
+SAY 'I DUNNO WHAT HAPPENED!?!?! SORRY!'
+say 'GOODBYE'
+EXIT

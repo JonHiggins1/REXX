@@ -1,0 +1,29 @@
+/*  Rexx PROGRAM NAME : AVERAGE
+	DESCRIPTION		  :AVERAGE CALCULATOR
+
+	AUTHOR			  : JON HIGGINS
+	DATE			  : 6/10/2019
+*/
+number_count = 0
+added_number
+CLRSCRN
+say " Do you want to average some numbers? "
+pull the_move1
+DO FOREVER
+IF the_move1 = 'N' THEN
+	DO
+			say " Inmput a number "
+			pull the_number
+			added_number = the_number + added_number
+			number_count = number_count + 1
+			say " Do you want to continue? "
+			pull the_move2
+			IF the_move2 = 'N' THEN
+				DO
+					the_average = added_number / number_count
+					say "The Average is : " the_average
+				END
+	END
+END
+say 'GOODBYE'
+EXIT
