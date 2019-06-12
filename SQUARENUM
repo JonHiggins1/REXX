@@ -7,39 +7,21 @@
     AUTHOR            : Jon Higgins                               
 
 */                                                   
-
 the_number = 0                                       
-
 the_word = 'Y'                                       
-
 DO while the_word = 'Y'                              
-
    say "GIVE ME A NUMBER TO SQUARE!"                 
-
    pull the_number                                   
-
    DO while datatype(the_number) \= 'NUM'            
-
       say 'Give me a number!'                        
-
       pull the_number                                 
-
    END                                               
-
    say the_number * the_number                       
-
    say 'Do you have another? (Y/N)'                  
-
    pull the_word                                     
-
    DO while the_word \= 'Y' or the_word \= 'N'      
-
        say 'Y or N'    
-
        pull the_word   
-
    END                 
-
 END                    
-
 say 'Baiiii'  

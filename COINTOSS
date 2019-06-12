@@ -7,75 +7,39 @@
     AUTHOR            : Jon Higgins    
 
 */                                     
-
 CLRSCRN                                
-
 say "COINTOSS BOOTING UP..."           
-
 say "LOADING..............."           
-
 say "Welcome to COINTOSS..."           
-
 say "CHOOSE HEADS or TAILS..."         
-
 coin_toss = random(1,2)                
-
 say "CHOOSE A SIDE!"                   
-
 say "1 = HEADS..."                     
-
 say "2 = TAILS..."                     
-
 pull the_move                          
-
    if the_move = 1 then do             
-
       your_move = "HEADS"              
-
       say " HEADS! " 
-
       if coin_toss = 1 then do             
-
          say " The TOSS IS HEADS! "        
-
          say " YOU WIN! "                  
-
          end                                
-
       else if coin_toss = 2 then do        
-
               say " THE TOSS IS TAILS "    
-
               say " YOU LOSE! "            
-
               end                          
-
    end                                     
-
    else if the_move = 2 then do            
-
            your_move = "TAILS"             
-
            say " TAILS NEVER FAILS! "      
-
             if coin_toss = 2 then do       
-
                say " The TOSS IS TAILS! "  
-
                say " YOU WIN! "            
-
                end                         
-
             else if coin_toss = 1 then do  
-
                     say " THE TOSS IS HEADS"
-
                     say " YOU LOSE! " 
-
                     end  
-
             end          
-
 say 'GAME OVER!'         
-
 exit   

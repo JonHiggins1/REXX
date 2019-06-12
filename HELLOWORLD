@@ -5,15 +5,9 @@
                                                        
 
     AUTHOR            : Jon Higgins                                
-
 */                                                     
-
 say 'Hello World'                                     
-
 number = 5                                            
-
 say number                                            
-
 text = 'Hello World!'                           
-
 say text   

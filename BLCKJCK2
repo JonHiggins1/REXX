@@ -8,181 +8,92 @@
     AUTHOR            : Jon Higgins                            
 
 */                                                  
-
 CLRSCRN                                              
-
 say "Dealer Deals your 1st card..."                 
-
 your_card1 = random(1,11)                           
-
 say "Your first cards value is: " your_card1        
-
 say "Dealer Deals his first card..."                 
-
 dealers_card1 = random(1,11)                        
-
 say "The Dealers  1st card value is: " dealers_card1
-
 say "Dealer Deals your 2nd card..."                 
-
 your_card2 = random(1,11)                           
-
 say "Your second cards value is: " your_card2       
-
 your_hand = your_card1 + your_card2                 
-
 say "Your hands value is: "  your_hand              
-
 dealers_card2 = random(1,11)  
-
 say "The Dealers 2nd card value is delt."                
-
 dealers_hand = dealers_card1 + dealers_card2             
-
 say "Your hand value is " your_hand "do you want to stay?"
-
 pull the_move                                            
-
 if the_move = 'Y' then do                                
-
    say "CHECK!"                                          
-
   if dealers_hand = 21 then                              
-
      DO                                                  
-
         say 'YOU LOSE! Dealer hit 21'                    
-
         say 'Dealers hand was: ' dealers_hand            
-
       END                                                
-
      else if your_hand = 21 then                         
-
           DO                                             
-
           say 'YOU WIN! You hit 21'                       
-
           say 'Dealers hand was: ' dealers_hand          
-
           END                                            
-
        else if dealers_hand > 21 then                    
-
                 DO                                       
-
                 say 'YOU WIN! Dealer went over!'
-
                 say 'Dealers hand was: ' dealers_hand              
-
                 END                                                
-
             else if your_hand > 21 then                            
-
                     DO                                             
-
                     say 'BUST!YOU LOSE! You went over!'            
-
                     say 'Dealers hand was: ' dealers_hand          
-
                     END                                             
-
                  else if dealers_hand > your_hand then             
-
                          DO                                        
-
                          say 'YOU LOSE!'                           
-
                          say 'Dealers hand was: ' dealers_hand     
-
                          END                                       
-
                        else if dealers_hand < your_hand then       
-
                                DO                                  
-
                                say 'YOU WIN!'                      
-
                                say 'Dealers hand was: ' dealers_hand
-
                                END                                  
-
 say 'GAME OVER!'                                                   
-
 end  
-
 else do                                        
-
 if the_move = "N" then                         
-
    your_card3 = random(1,11)                   
-
    your_hand2 = your_hand + your_card3         
-
    say "Your 3rd card value is " your_card3    
-
    say "Your hand value is now " your_hand2    
-
   if dealers_hand = 21 then                    
-
      DO                                        
-
      say 'YOU LOSE! Dealer hit 21'             
-
      say 'Dealers hand was: ' dealers_hand     
-
      END                                       
-
   else if your_hand2 = 21 then                 
-
           DO                                   
-
           say 'YOU WIN! You hit 21'            
-
           say 'Dealers hand was: ' dealers_hand
-
           END                                  
-
        else if dealers_hand > 21 then          
-
                DO                              
-
                say 'YOU WIN! Dealer went over' 
-
                say 'Dealers hand was: ' dealers_hand              
-
                END                                                
-
             else if your_hand2 > 21 then                          
-
                     DO                                            
-
                     say 'YOU LOSE! You went over'                 
-
                     say 'Dealers hand was: ' dealers_hand         
-
                     END                                            
-
                  else if dealers_hand > your_hand2 then           
-
                          DO                                       
-
                          say 'YOU LOSE!'                          
-
                          say 'Dealers hand was: ' dealers_hand    
-
                          END                                      
-
                       else if dealers_hand < your_hand2 then      
-
                               DO                                  
-
                               say 'YOU WIN!'                      
-
                               say 'Dealers hand was: ' dealers_hand
-
                               END                                 
-
 say 'GAME OVER!'                                                  
-
 end  
