@@ -1,0 +1,26 @@
+/*  REXX PROGRAM NAME : GUESSNUM                          
+
+    DESCRIPTION       : GUESS THE NUMBER SCRIPT            
+
+                                                            
+
+    AUTHOR            : Jon Higgins                        
+                  
+
+*/                                                         
+
+the_number = random(1,10)                                  
+
+say "I'm thinking of a number between 1 and 10, What is it?"
+
+pull the_guess                                             
+
+if the_number = the_guess then                             
+
+    say the_number 'is correct!'                           
+
+else                                                       
+
+    say 'Sorry, my number was: ' the_number                
+
+say 'Bye!'  

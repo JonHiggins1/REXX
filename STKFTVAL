@@ -1,0 +1,59 @@
+/*  REXX PROGRAM NAME : STKFTVAL                             
+
+    DESCRIPTION       : Stock Future Value Calculator        
+
+                                                              
+
+    AUTHOR            : Jon Higgins                                                 
+
+*/                                                           
+
+CLRSCRN                                                       
+
+say " To calculate the FV of a stock the equation is:"       
+
+say " FV = PV ( 1 + I ) ^N "                                 
+
+say " Where FV = Future Value "                              
+
+say " PV = Present Value "                                   
+
+say " N  = Time Period in Years "                            
+
+say " I  = Rate of Return "                                  
+
+CLRSCRN                                                      
+
+say " Do you want to Calculate the Future value of a stock? "
+
+pull the_move                                                
+
+IF the_move = 'Y' THEN                                       
+
+   DO                                                        
+
+   say " What is the Present Value of the stock? (PV) "    
+
+   pull STK_PV                                
+
+   say " What is the Rate of return? (I) "    
+
+   pull STK_I                                  
+
+   say " Desired Time period? (N) "           
+
+   pull STK_N                                 
+
+       STK_PAR = (1 + STK_I) ** STK_N         
+
+       STK_FV =  STK_PV * STK_PAR             
+
+        say "The Future Value (FV) = " STK_FV 
+
+   END                                         
+
+ELSE EXIT                                     
+
+say 'GOODBYE'                                 
+
+EXIT 

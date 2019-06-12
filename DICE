@@ -1,0 +1,29 @@
+/*  REXX PROGRAM NAME : DICE               
+
+    DESCRIPTION       : ROLL DICE          
+
+                                            
+
+    AUTHOR            : Jon Higgins      
+
+*/                                         
+
+CLRSCRN                                    
+
+dice_roll1 = random(1,6)                   
+
+dice_roll2 = random(1,6)                   
+
+die_sum = 0                                
+
+say "Dice 1 = " dice_roll1                 
+
+say "Dice 2 = " dice_roll2                 
+
+dice_sum = dice_roll1 + dice_roll2         
+
+say "Thats: " dice_sum                     
+
+say 'GAME OVER!'                           
+
+exit 

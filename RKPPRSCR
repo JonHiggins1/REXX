@@ -1,0 +1,131 @@
+/*  REXX PROGRAM NAME : RKPPRSCR              
+
+    DESCRIPTION       : rock, paper, scissors 
+
+                                               
+
+    AUTHOR            : Jon Higgins                   
+
+*/                                            
+
+CLRSCRN                                       
+
+say "ROCK..."                                 
+
+say "PAPER..."                                
+
+say "SCISSORS..."                             
+
+say "SHOOT!....."                             
+
+opponents_move = random(1,3)                  
+
+say "pick your weapon..."                     
+
+say "1 = ROCK..."                             
+
+say "2 = PAPER..."                             
+
+say "3 = SCISSORS..."                         
+
+pull the_move                                 
+
+   if the_move = 1 then do                    
+
+      your_move = "ROCK"   
+
+      say " ROCK "                              
+
+      if opponents_move = 3 then do             
+
+         say " ROCK beats Scissors! "           
+
+         say " YOU WIN! "                       
+
+         end                                    
+
+      else if opponents_move = 2 then do        
+
+              say " PAPER beats ROCK! "         
+
+              say " YOU LOSE! "                 
+
+              end                               
+
+           else if opponents_move = 1 then do   
+
+                   say " 2 ROCKS! "             
+
+                   say " TIE! "                 
+
+                   end                          
+
+   end                                          
+
+   else if the_move = 2 then do                 
+
+           your_move = "PAPER"                  
+
+           say " PAPER "                        
+
+            if opponents_move = 3 then do       
+
+               say " SCISSORS beats PAPER! "  
+
+               say " YOU LOSE! "                    
+
+               end                                  
+
+            else if opponents_move = 2 then do      
+
+                    say " 2 PAPERS! "               
+
+                    say " TIE! "                    
+
+                    end                             
+
+                 else if opponents_move = 1 then do 
+
+                         say " PAPER beats ROCK! "  
+
+                         say " YOU WIN! "           
+
+                         end                        
+
+        end                                          
+
+        else if the_move = 3 then do                
+
+                your_move = "SCISSORS"              
+
+                say " SCISSORS "                    
+
+                if opponents_move = 3 then do       
+
+                   say " 2 SCISSORS! "              
+
+                   say " TIE! "                     
+
+                   end                              
+
+                else if opponents_move = 2 then do    
+
+                        say " SCISSORS beats PAPER! "   
+
+                        say " YOU WIN! "                
+
+                        end                             
+
+                     else if opponents_move = 1 then do 
+
+                             say " ROCK beats SCISSORS! "
+
+                             say " YOU LOSE! "          
+
+                             end                        
+
+             end                                        
+
+say 'GAME OVER!'                                         
+
+exit    

@@ -1,0 +1,219 @@
+
+/*  REXX PROGRAM NAME : BASEBALL                                       
+
+    DESCRIPTION       : Baseball                                      
+
+    AUTHOR            : Jon Higgins                                   
+                              
+
+    *******************************************************************
+
+    *******************    !!!!!  WARNING !!!!!    ********************
+
+    *******************************************************************
+
+    * This has not been completed and is left in a broken state if    *
+
+    * you execute this you may end up in an infinite loop ............*
+    * I will come back and compete this                               *
+    * eventually............................................maybe     *
+
+    * If i ever get the motivation/ time to work on this again....... *
+
+    *******************************************************************
+
+    *******************    !!!!!  WARNING !!!!!    ********************
+
+    *******************************************************************
+
+*/
+
+CLRSCRN                           
+
+hit_type = random(1,7)            
+
+/*                                
+
+hit_type:                         
+
+1 = Single                        
+
+2 = Double                        
+
+3 = Triple                        
+
+4 = Homerun                       
+
+5 = Strikeout                     
+
+6 = Groundout                     
+
+7 = Flyout                        
+
+*/                                
+
+your_score = 0                    
+
+opponents_score = 0               
+
+inning_num = 1                    
+
+out_ctr = 0                       
+
+the_diamond = 0                   
+
+say "Do you want to play baseball?"
+
+pull the_move                     
+
+do forever
+
+IF the_move = 'N' THEN do                   
+
+   exit                                     
+
+   end                                      
+
+   else if the_move = 'Y' then do           
+
+      out_ctr = 0                           
+
+      the_diamond = 0                        
+
+      say "youre up to bat."                
+
+if out_ctr = 3 then do                      
+
+   inning_num = inning_num +1               
+
+   say "Inning over!"                       
+
+   say "Now its the top of the: " inning_num
+
+   your_score = the_diamond /4              
+
+   say "your score is:" your_score          
+
+   say "Do you want to continue?"           
+
+   hit_type = random(1,7)                   
+
+   pull the_move                             
+
+   if the_move = 'N' then leave             
+
+   end                                      
+
+else if out_ctr < 3 then do   
+
+   hit_type = random(1,7)               
+
+  IF hit_type = 1 THEN do               
+
+     say "SINGLE!"                       
+
+     the_diamond = the_diamond +1       
+
+     end                                
+
+  else if hit_type = 2 then do          
+
+          say "DOUBLE!"                 
+
+          the_diamond = the_diamond +2  
+
+          end                            
+
+  else if hit_type = 3 then do          
+
+          say "TRIPLE!"                 
+
+          the_diamond = the_diamond +3  
+
+          end                           
+
+  else if hit_type = 4 then do          
+
+          say "HOMERUN!"                 
+
+          the_diamond = the_diamond +4  
+
+          end                           
+
+  else if hit_type = 5 then do          
+
+          say "STRIKEOUT!"
+
+          out_ctr = out_ctr +1                     
+
+          if out_ctr = 3 then do                   
+
+          inning_num = inning_num +1               
+
+          say "Inning over!"                       
+
+          say "Now its the top of the: " inning_num
+
+          your_score = the_diamond /4               
+
+          say "your score is:" your_score          
+
+          end                                      
+
+          end                                      
+
+  else if hit_type = 6 then do                     
+
+          say "GROUNDOUT!"                          
+
+          out_ctr = out_ctr +1                     
+
+          if out_ctr = 3 then do                   
+
+          inning_num = inning_num +1               
+
+          say "Inning over!"                       
+
+          say "Now its the top of the: " inning_num
+
+          your_score = the_diamond /4              
+
+          say "your score is:" your_score          
+
+          end 
+
+  else if hit_type = 8 then do                      
+
+          say "FLYOUT!"                             
+
+          out_ctr = out_ctr +1                      
+
+          if out_ctr = 3 then do                    
+
+          inning_num = inning_num +1                
+
+          say "Inning over!"                        
+
+          say "Now its the top of the: " inning_num 
+
+          your_score = the_diamond /4               
+
+          say "your score is:" your_score           
+
+          exit                                      
+
+          end                                       
+
+end                                                 
+
+end                                                 
+
+end                                                 
+
+end                                                 
+
+end                                                  
+
+say " I DUNNO WHAT HAPPENED, SORRY!! "              
+
+exit   

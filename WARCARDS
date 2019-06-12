@@ -1,0 +1,179 @@
+/*  REXX PROGRAM NAME : WARCARDS          
+
+    DESCRIPTION       : WarCards          
+
+                                           
+
+    AUTHOR            : Jon Higgins            
+
+*/                                         
+
+CLRSCRN                                   
+
+your_card = random(1,11)                  
+
+Uwar_card = random(1,11)                  
+
+dealers_card = random(1,11)               
+
+Dwar_card = random(1,11)                  
+
+your_cardcnt = 26                         
+
+dealers_cardcnt = 26                      
+
+say "Do you want to play?"                
+
+pull the_move                             
+
+do forever                                 
+
+   IF the_move = 'N' THEN do              
+
+      exit                                
+
+      end 
+
+   else if the_move = 'Y' then do                           
+
+      say "Your card's value is: " your_card                
+
+      say "The Dealer's card value is: " dealers_card       
+
+      IF your_card > dealers_card then do                   
+
+         say 'You WON this round!'                          
+
+         your_cardcnt = your_cardcnt +1                     
+
+         dealers_cardcnt = dealers_cardcnt -1               
+
+         say 'ROUND OVER!'                                  
+
+         say 'Your Card Count is now ' your_cardcnt         
+
+         say 'The Dealers Card Count is now ' dealers_cardcnt
+
+         say "Do you want to continue?"                      
+
+         your_card = random(1,11)                           
+
+         Uwar_card = random(1,11)                           
+
+         dealers_card = random(1,11)                        
+
+         Dwar_card = random(1,11)                            
+
+         pull the_move                                      
+
+         if the_move = 'N' then leave                       
+
+         end                                                
+
+      else IF your_card < dealers_card then do      
+
+              say 'You LOST this round!'                            
+
+              your_cardcnt = your_cardcnt -1                        
+
+              dealers_cardcnt = dealers_cardcnt +1                   
+
+              say 'ROUND OVER!'                                     
+
+              say 'Your Card Count is now ' your_cardcnt            
+
+              say 'The Dealers Card Count is now ' dealers_cardcnt  
+
+              say "Do you want to continue?"                        
+
+              your_card = random(1,11)                              
+
+              Uwar_card = random(1,11)                              
+
+              dealers_card = random(1,11)                           
+
+              Dwar_card = random(1,11)                              
+
+              pull the_move                                         
+
+              if the_move = 'N' then leave                          
+
+              end                                                    
+
+           else IF your_card = dealers_card then do                 
+
+                   say 'WAR!'                                       
+
+                   say '3!'                                         
+
+                   say '2!'                                          
+
+                   say '1!'  
+
+                   if Uwar_card > Dwar_card then do                  
+
+                      Say 'YOU WIN!'                                 
+
+                      your_cardcnt = your_cardcnt +3                 
+
+                      dealers_cardcnt = dealers_cardcnt -3           
+
+                       say 'Your Card Count is now ' your_cardcnt    
+
+                  say 'The Dealers Card Count is now ' dealers_cardcnt
+
+                       say "Do you want to continue?"                
+
+                       your_card = random(1,11)                      
+
+                       Uwar_card = random(1,11)                      
+
+                       dealers_card = random(1,11)                   
+
+                       Dwar_card = random(1,11)                      
+
+                       pull the_move                                 
+
+                       if the_move = 'N' then leave                  
+
+                       end                                           
+
+                      else if Dwar_card > Uwar_card then do          
+
+                            Say 'YOU LOSE!'                          
+
+                            your_cardcnt = your_cardcnt -3           
+
+                            dealers_cardcnt = dealers_cardcnt +3     
+
+                            say 'ROUND OVER!'    
+
+                            say 'Your Card Count is now ' your_cardcnt 
+
+                    say 'The Dealers Card Count is now ' dealers_cardcnt
+
+                            say "Do you want to continue?"             
+
+                            your_card = random(1,11)                   
+
+                            Uwar_card = random(1,11)                   
+
+                            dealers_card = random(1,11)                
+
+                            Dwar_card = random(1,11)                   
+
+                            pull the_move                              
+
+                            if the_move = 'N' then leave               
+
+                            end                                        
+
+end                                                                    
+
+end                                                                     
+
+end                                                                    
+
+say " I DUNNO WHAT HAPPENED, SORRY!! "                                 
+
+exit          

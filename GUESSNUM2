@@ -1,0 +1,25 @@
+/*  REXX PROGRAM NAME : GUESSNUM2                             
+
+    DESCRIPTION       : YOU CAN NEVER GUESS THE NUMBER PROGRAM
+
+                                                             
+
+    AUTHOR            : Jon Higgins                                            
+
+*/                                                           
+
+the_number = random(1,10)                                    
+
+say "I'm thinking of a number between 1 and 10. What is it?" 
+
+pull the_guess                                               
+
+DO WHILE the_number = the_guess                              
+
+    the_number = random(1,10)                                
+
+END                                                           
+
+say 'Sorry, my number was: ' the_number                      
+
+say 'Bye!' 

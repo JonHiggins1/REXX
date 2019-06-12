@@ -1,0 +1,19 @@
+/*  REXX PROGRAM NAME : HELLOWORLD                     
+
+    DESCRIPTION       : THIS IS MY FIRST REXX PROGRAM 
+
+                                                       
+
+    AUTHOR            : Jon Higgins                                
+
+*/                                                     
+
+say 'Hello World'                                     
+
+number = 5                                            
+
+say number                                            
+
+text = 'Hello World!'                           
+
+say text   
